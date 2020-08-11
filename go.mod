@@ -70,12 +70,9 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
 )
 
-// We want to replace the client-go version with a specific commit hash,
-// so that we don't get errors about being incompatible with the Go proxies.
-// See https://github.com/thanos-io/thanos/issues/1415
 replace (
 	// Make sure Prometheus version is pinned as Prometheus semver does not include Go APIs.
-	github.com/prometheus/prometheus => github.com/prometheus/prometheus v1.8.2-0.20200807135816-2899773b0159
+	github.com/prometheus/prometheus => github.com/prometheus/prometheus v1.8.2-0.20200811055608-4ae2ef94e0f6
 	google.golang.org/grpc => google.golang.org/grpc v1.29.1
 	k8s.io/klog => k8s.io/klog v0.3.1
 	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
